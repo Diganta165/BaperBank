@@ -1,13 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <h1>Banking Site</h1>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
 </head>
+
 <body>
-    
+    <main class="w-3/4 mx-auto">
+        <h1 class="text-5xl text-center mt-16">Let's Get Some <span
+                class="text-purple-600 font-semibold">Mooooooney</span>!!!</h1>
+
+        <!-- Balance & transection -->
+        <section class="mt-10">
+            <div class="grid grid-cols-3 gap-4 rounded  text-white">
+                <div class="bg-blue-300 p-8">
+                    <h1 class="text-3xl">Deposit</h1>
+                    <h1 class="text-4xl">$00</h1>
+                </div>
+                <div class="bg-yellow-300 p-8 rounded">
+                    <h1 class="text-3xl">Withdraw</h1>
+                    <h1 class="text-4xl">$00</h1>
+                </div>
+                <div class=" bg-green-300 p-8 rounded">
+                    <h1 class="text-3xl">Balance</h1>
+                    <h1 class="text-4xl">$1200</h1>
+                </div>
+            </div>
+        </section>
+
+        <!-- Deposit and Withdraw  -->
+        <section>
+            <div class=" grid grid-cols-2 gap-4 mt-8">
+                <div class="bg-red-100 p-8 rounded">
+                    <h3 class="text-2xl mb-4 p-2">Please Deposit</h3>
+                    <div>
+                        <input id="deposit-input" class="border border-gray-400 rounded p-1 block w-3/4 mb-4 px-2 "
+                            type="text" placeholder="$$ amount you want to deposit " />
+
+                        <button id="deposit-submit"
+                            class="p-1 bg-indigo-400 rounded px-2 text-white font-medium">Submit</button>
+                    </div>
+                </div>
+                <div class="bg-purple-100 p-8 rounded">
+                    <h3 class="text-2xl mb-4 p-2">Please Withdraw</h3>
+                    <div>
+                        <input id="withdraw-input" class="border border-gray-400 rounded p-1 block w-3/4 mb-4 px-2 "
+                            type="text" placeholder="$$ amount you want to withdraw " />
+
+                        <button id="withdraw-submit"
+                            class="p-1 bg-indigo-400 rounded px-2 text-white font-medium">Submit</button>
+                    </div>
+                </div>
+
+                <div>
+
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
+
 </html>
