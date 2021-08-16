@@ -1,10 +1,20 @@
+function getInputValue(inputID){
+    const inputField = document.getElementById(inputID);
+    const inputAmountText = inputField.value;
+    const amountValue = parseFloat(inputAmountText);
+    inputField.value = '';
+    
+    return amountValue;
+}
+
 // Deposit
 document.getElementById('deposit-submit').addEventListener('click', function(){
     //get the deposit amount
-    const depositField = document.getElementById('deposit-input');
-    const newDepositAmountText = depositField.value;
-    const newDepositAmount = parseFloat(newDepositAmountText);
+    // const depositField = document.getElementById('deposit-input');
+    // const newDepositAmountText = depositField.value;
+    // const newDepositAmount = parseFloat(newDepositAmountText);
     
+    const newDepositAmount = getInputValue('deposit-input');
     
     const depositTotal = document.getElementById('deposit-total');
     
@@ -27,15 +37,16 @@ document.getElementById('deposit-submit').addEventListener('click', function(){
 
     // clear the deposit input 
 
-    depositField.value = '';
+    // depositField.value = '';
 })
 
 //withdraw
 
 document.getElementById('withdraw-submit').addEventListener('click',function(){
-    const withdrawField = document.getElementById('withdraw-input');
-    const newWithdrawAmountText = withdrawField.value;
-    const newWithdrawAmount = parseFloat(newWithdrawAmountText);
+    // const withdrawField = document.getElementById('withdraw-input');
+    // const newWithdrawAmountText = withdrawField.value;
+    // const newWithdrawAmount = parseFloat(newWithdrawAmountText);
+    const newWithdrawAmount = getInputValue('withdraw-input')
 
     const withdrawTotal = document.getElementById('withdraw-total');
     const withdrawTotalText = withdrawTotal.innerText;
@@ -55,6 +66,6 @@ document.getElementById('withdraw-submit').addEventListener('click',function(){
     balanceTotal.innerText = newBalanceTotal;
 
     // clear withdraw input 
-    withdrawField.value ='';
+    // withdrawField.value ='';
 
 })
